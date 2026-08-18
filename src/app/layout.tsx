@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, New_Rocker} from "next/font/google";
+import { Geist, Geist_Mono, New_Rocker, IBM_Plex_Mono} from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -21,6 +21,13 @@ const newRocker = New_Rocker({
   weight: "400"
 });
 
+const ibmMono = IBM_Plex_Mono({
+  variable: "--font-ibm-mono",
+  subsets: ["latin"],
+  weight: "400"
+});
+
+
 
 export const metadata: Metadata = {
   title: "Mancudo | Tatuador",
@@ -35,9 +42,9 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${geistSans.variable} ${geistMono.variable} ${newRocker.variable} flex flex-col h-full antialiased dark`}
+      className={`${geistSans.variable} ${geistMono.variable} ${newRocker.variable} ${ibmMono.variable} flex flex-col h-full antialiased dark`}
     >
-      <body className="bg-black text-white min-h-full flex flex-col bg-noise selection:bg-accent selection:text-white">
+      <body suppressHydrationWarning className="bg-black text-white min-h-full flex flex-col bg-noise selection:bg-accent selection:text-white">
         <Header />
         <main className="flex-1 flex flex-col">{children}</main>
         <Footer />

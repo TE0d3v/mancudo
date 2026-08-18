@@ -34,15 +34,12 @@ export default function Header() {
         </button>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center justify-end gap-6 text-white font-rocker text-lg tracking-wide w-full">
+        <nav className="hidden md:flex items-center justify-end gap-6 text-white font-rocker font-bold text-lg tracking-wide w-full">
           <Link href="/" className="px-4 py-2 hover:bg-accent hover:text-black transition-colors duration-200">
             INÍCIO
           </Link>
           <Link href="/cuidados" className="px-4 py-2 hover:bg-accent hover:text-black transition-colors duration-200">
             CUIDADOS
-          </Link>
-          <Link href="/catalogo" className="px-4 py-2 hover:bg-accent hover:text-black transition-colors duration-200">
-            CATÁLOGO
           </Link>
           <Link href="/sobre" className="px-4 py-2 hover:bg-accent hover:text-black transition-colors duration-200">
             SOBRE MIM
