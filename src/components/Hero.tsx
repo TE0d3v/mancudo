@@ -18,16 +18,16 @@ export function Hero() {
         transition={{ delay: 0.2, duration: 0.8 }}
         className="font-rocker text-6xl md:text-8xl lg:text-[10rem] mb-6 tracking-wide text-white uppercase drop-shadow-[0_0_15px_rgba(220,38,38,0.3)] leading-none"
       >
-        Arte <span className="text-accent">Brutal</span>
+        Tattoo <span className="text-accent">Mancuda</span>
       </motion.h2>
       
       <motion.p 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4, duration: 0.8 }}
-        className="max-w-2xl text-zinc-400 text-lg md:text-2xl mb-12 font-bold tracking-tight"
+        className="max-w-2xl text-zinc-400 text-lg md:text-2xl mb-12 font-bold tracking-tight font-vt323"
       >
-        Tatuagem não é adorno, é cicatriz intencional. Especialista em blackwork, trash polka e designs autorais intensos.
+        Tatuagem não é adorno, é cicatriz intencional. O mais Mancudo de fotal city.
       </motion.p>
 
       <motion.div

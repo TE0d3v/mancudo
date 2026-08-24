@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, New_Rocker, IBM_Plex_Mono} from "next/font/google";
+import { Geist, Geist_Mono, New_Rocker, VT323} from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -21,8 +21,8 @@ const newRocker = New_Rocker({
   weight: "400"
 });
 
-const ibmMono = IBM_Plex_Mono({
-  variable: "--font-ibm-mono",
+const Vt323 = VT323({
+  variable: "--font-vt-323",
   subsets: ["latin"],
   weight: "400"
 });
@@ -42,7 +42,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${geistSans.variable} ${geistMono.variable} ${newRocker.variable} ${ibmMono.variable} flex flex-col h-full antialiased dark`}
+      className={`${geistSans.variable} ${geistMono.variable} ${newRocker.variable} ${Vt323.variable} flex flex-col h-full antialiased dark`}
     >
       <body suppressHydrationWarning className="bg-black text-white min-h-full flex flex-col bg-noise selection:bg-accent selection:text-white">
         <Header />

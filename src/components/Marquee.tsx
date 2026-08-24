@@ -10,11 +10,11 @@ export function Marquee({ reverse = false }: MarqueeProps) {
   const items = Array.from({ length: 8 });
 
   const ImageSet = () => (
-    <div className="flex flex-col gap-10 py-5">
+    <div className="flex flex-col gap-2 py-5">
       {items.map((_, i) => (
-        <div key={i} className="relative w-full h-[40vh] opacity-30 grayscale mix-blend-screen">
+        <div key={i} className="relative w-full h-[80vh] opacity-30 grayscale mix-blend-screen">
           <Image 
-            src="/marquee-image.jpeg" 
+            src="/marquee-image.svg" 
             alt="Mancudo Art" 
             fill
             className="object-contain"

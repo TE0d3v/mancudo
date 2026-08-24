@@ -21,11 +21,11 @@ export default async function Home() {
       <main className="flex flex-1 w-full flex-col items-center justify-start relative overflow-hidden">
         
         {/* Animated Marquee Backgrounds */}
-        <div className="fixed top-0 left-0 w-[30vw] md:w-[20vw] h-screen overflow-hidden pointer-events-none z-0">
+        <div className="fixed top-0 left-0 w-screen md:w-[45vw]  h-screen overflow-hidden pointer-events-none z-0">
           <Marquee />
         </div>
         
-        <div className="fixed top-0 right-0 w-[30vw] md:w-[20vw] h-screen overflow-hidden pointer-events-none z-0">
+        <div className="fixed top-0 right-0 w-screen md:w-[45vw] h-screen overflow-hidden pointer-events-none z-0">
           <Marquee reverse />
         </div>
 

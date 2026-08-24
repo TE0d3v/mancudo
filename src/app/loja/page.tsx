@@ -18,7 +18,7 @@ export default async function LojaPage() {
       <div className="mb-16">
         <h1 className="font-rocker text-5xl md:text-7xl uppercase tracking-wider mb-4">Loja</h1>
         <div className="w-24 h-1 bg-accent mb-6"></div>
-        <p className="text-zinc-400 max-w-2xl text-lg">Produtos exclusivos para tatuadores e amantes da arte brutal.</p>
+        <p className="text-zinc-400 max-w-2xl text-lg">Artes exclusivas pra quem quer ter um visual mancudo.</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -33,7 +33,7 @@ export default async function LojaPage() {
                   src={product.imageUrl} 
                   alt={product.title || "Produto"} 
                   fill
-                  className="object-contain grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                  className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
                 />
               </div>
             )}

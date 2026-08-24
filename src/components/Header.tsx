@@ -14,19 +14,16 @@ export default function Header() {
       <div className="flex items-center justify-between w-full h-24 px-6 md:px-10">
         <div className="flex items-center justify-center">
           <Link href="/">
-            <Image
-              className="h-16 w-auto md:h-20 invert"
-              src="/mancudo.svg"
+            <img
+              className="h-20 md:h-24 w-auto invert"
+              src="/dogs.svg"
               alt="Mancudo logo"
-              width={100}
-              height={20}
-              priority
             />
           </Link>
         </div>
 
         {/* Mobile menu button */}
-        <button 
+        <button
           className="md:hidden text-white hover:text-accent transition-colors"
           onClick={() => setIsOpen(!isOpen)}
         >
@@ -34,7 +31,7 @@ export default function Header() {
         </button>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center justify-end gap-6 text-white font-rocker font-bold text-lg tracking-wide w-full">
+        <nav className="hidden md:flex items-center justify-end gap-6 text-white font-rocker font-bold text-lg tracking-wide">
           <Link href="/" className="px-4 py-2 hover:bg-accent hover:text-black transition-colors duration-200">
             INÍCIO
           </Link>

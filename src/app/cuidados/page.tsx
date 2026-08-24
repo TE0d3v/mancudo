@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import { Skull, Droplet, Sun, Hand, Flame, ShieldAlert, BadgeCheck } from "lucide-react";
 
+import { Marquee } from "@/components/Marquee";
+
 const dos = [
   { icon: Droplet, text: "Lave com sabonete neutro (sem perfume) 2 a 3 vezes ao dia." },
   { icon: ShieldAlert, text: "Mantenha a tatuagem hidratada, mas sem exagero (camada muito fina de pomada)." },
@@ -18,7 +20,18 @@ const donts = [
 
 export default function Cuidados() {
   return (
-    <div className="flex flex-col flex-1 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+    <div className="flex flex-col flex-1 items-center justify-start font-sans w-full relative overflow-hidden">
+      
+      {/* Animated Marquee Backgrounds */}
+      <div className="fixed top-0 left-0 w-screen md:w-[45vw] h-screen overflow-hidden pointer-events-none z-0">
+        <Marquee />
+      </div>
+      
+      <div className="fixed top-0 right-0 w-screen md:w-[45vw] h-screen overflow-hidden pointer-events-none z-0">
+        <Marquee reverse />
+      </div>
+
+      <main className="flex flex-col flex-1 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 relative z-10">
       
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
@@ -79,9 +92,8 @@ export default function Cuidados() {
             ))}
           </ul>
         </motion.div>
-
       </div>
-      
+      </main>
     </div>
   );
 }

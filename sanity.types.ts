@@ -177,7 +177,20 @@ export type Geopoint = {
   alt?: number;
 };
 
-export type AllSanitySchemaTypes = SanityImageAssetReference | Product | SanityImageCrop | SanityImageHotspot | Slug | SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityImageMetadata | SanityFileAsset | SanityAssetSourceData | SanityImageAsset | Geopoint;
+export type AllSanitySchemaTypes =
+  | SanityImageAssetReference
+  | Product
+  | SanityImageCrop
+  | SanityImageHotspot
+  | Slug
+  | SanityImagePaletteSwatch
+  | SanityImagePalette
+  | SanityImageDimensions
+  | SanityImageMetadata
+  | SanityFileAsset
+  | SanityAssetSourceData
+  | SanityImageAsset
+  | Geopoint;
 
 // Source: ../mancudo/src/app/loja/[slug]/page.tsx
 // Variable: PRODUCT_QUERY
@@ -239,8 +252,7 @@ export type PRODUCTS_QUERY_RESULT = Array<{
 import "@sanity/client";
 declare module "@sanity/client" {
   interface SanityQueries {
-    "*[_type == \"product\" && slug.current == $slug][0]{ _id, title, price, description }": PRODUCT_QUERY_RESULT;
-    "*[_type == \"product\" && defined(slug.current)] | order(_createdAt desc){ _id, title, slug, price, description, \"imageUrl\": image.asset->url }": PRODUCTS_QUERY_RESULT;
+    '*[_type == "product" && slug.current == $slug][0]{ _id, title, price, description }': PRODUCT_QUERY_RESULT;
+    '*[_type == "product" && defined(slug.current)] | order(_createdAt desc){ _id, title, slug, price, description, "imageUrl": image.asset->url }': PRODUCTS_QUERY_RESULT;
   }
 }
-
