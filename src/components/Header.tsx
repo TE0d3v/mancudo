@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import LogoLoop from "./LogoLoop";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,14 +12,31 @@ export default function Header() {
   return (
     <header className="flex flex-col md:flex-row w-full bg-black relative z-50">
       <div className="flex items-center justify-between w-full h-24 px-6 md:px-10">
-        <div className="flex items-center justify-center flex-1">
-          <Link href="/">
-            <img
-              className="h-20 md:h-24 w-auto invert"
-              src="/dogs.svg"
-              alt="Mancudo logo"
-            />
-          </Link>
+        <div className="flex items-center flex-1 h-full py-2 overflow-hidden mr-4">
+          <LogoLoop
+            logos={[
+              
+              {
+                node: (
+                  <Link href="/" className="flex items-center h-16 group hover:opacity-80 transition-opacity">
+                    <img
+                      src="/logomancuda.svg"
+                      alt="Mancudo logo"
+                      className="h-full w-auto object-contain invert"
+                    />
+                  </Link>
+                )
+              }
+            ]}
+            speed={40}
+            direction="right"
+            logoHeight={64}
+            gap={1400}
+            fadeOut={true}
+            fadeOutColor="#000000"
+            className="w-full h-full flex items-center"
+          />
+
         </div>
 
         {/* Mobile menu button */}
