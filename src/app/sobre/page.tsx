@@ -63,11 +63,11 @@ export default function Sobre() {
           <h1 className="font-rocker text-6xl md:text-8xl mb-2 tracking-wide uppercase text-white drop-shadow-md">
             Mancudo
           </h1>
-          <h2 className="text-accent text-xl font-bold tracking-[0.2em] uppercase mb-8">
+          <h2 className="text-accent text-3xl font-bold tracking-[0.2em] uppercase mb-8">
             Tatuador & Artista
           </h2>
 
-          <div className="space-y-6 text-zinc-400 text-2xl leading-relaxed mb-10 border-l-2 border-accent pl-6 font-vt323">
+          <div className="space-y-6 text-zinc-400 text-4xl leading-relaxed mb-10 border-l-2 border-accent pl-6 font-vt323">
             <p>
               Tatuagem não é sobre moda, é sobre marcar um momento na pele para a eternidade.
               Com mais de 3 anos de agulha e tinta preta correndo nas veias, meu trabalho é 
@@ -99,7 +99,7 @@ export default function Sobre() {
             QUEM TÁ RISCANDO?
           </h2>
 
-          <div className="space-y-6 text-zinc-400 text-2xl leading-relaxed mb-10 border-l-2 border-accent pl-6 font-vt323">
+          <div className="space-y-6 text-zinc-400 text-4xl leading-relaxed mb-10 border-l-2 border-accent pl-6 font-vt323">
             <p>
               Sou o FELIPE , o ADM por trás da tatu mancuda.
               Sou cria do famoso 085 ( FORTAL) . Nunca pisei em faculdade de artes e nunca fiz curso pra aprender a desenhar. Meu estilo nasceu das minhas vivências, frustrações e etc . 

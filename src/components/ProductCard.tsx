@@ -11,21 +11,18 @@ interface ProductCardProps {
     image: any;
     category?: string;
   };
-  index: number;
 }
 
-export function ProductCard({ product, index }: ProductCardProps) {
-  // Translate index into layout position to keep the brutalist zig-zag pattern
-  const isOffset = index % 3 === 1;
-
+export function ProductCard({ product }: ProductCardProps) {
   return (
-    <Link href={`/catalogo/${product.slug}`} className={`block ${isOffset ? 'md:translate-y-10' : ''}`}>
+    <Link href={`/loja/${product.slug}`} className="block">
       <div className="relative aspect-3/4 border-4 border-zinc-800 hover:border-accent transition-colors duration-300 group overflow-hidden">
         {product.image ? (
           <Image 
             src={urlFor(product.image).url()} 
             alt={product.title} 
-            fill 
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
           />
         ) : (
@@ -35,11 +32,11 @@ export function ProductCard({ product, index }: ProductCardProps) {
         )}
         <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center flex-col gap-2">
           {product.category && (
-            <span className="font-rocker text-2xl text-accent border-2 border-accent px-4 py-2 uppercase">
+            <span className="font-rocker text-3xl text-accent border-2 border-accent px-4 py-2 uppercase">
               {product.category}
             </span>
           )}
-          <span className="text-white font-bold tracking-widest uppercase">{product.title}</span>
+          <span className="text-white text-2xl font-bold tracking-widest uppercase">{product.title}</span>
         </div>
       </div>
     </Link>

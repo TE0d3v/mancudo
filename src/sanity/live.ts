@@ -5,5 +5,7 @@ export const { sanityFetch, SanityLive } = defineLive({
   client: client.withConfig({ 
     apiVersion: 'vX', // Use the latest API version or 'vX' for live
     useCdn: false
-  })
+  }),
+  serverToken: false,
+  browserToken: false
 });

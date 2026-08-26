@@ -17,6 +17,7 @@ export function Marquee({ reverse = false }: MarqueeProps) {
             src="/marquee-image.svg" 
             alt="Mancudo Art" 
             fill
+            priority
             className="object-contain"
           />
         </div>

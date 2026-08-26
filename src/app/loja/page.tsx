@@ -18,7 +18,7 @@ export default async function LojaPage() {
       <div className="mb-16">
         <h1 className="font-rocker text-5xl md:text-7xl uppercase tracking-wider mb-4">Loja</h1>
         <div className="w-24 h-1 bg-accent mb-6"></div>
-        <p className="text-zinc-400 max-w-2xl text-lg">Artes exclusivas pra quem quer ter um visual mancudo.</p>
+        <p className="text-zinc-400 max-w-2xl text-2xl">Artes exclusivas pra quem quer ter um visual mancudo.</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -40,15 +40,15 @@ export default async function LojaPage() {
             
             <div className="p-6 flex flex-col flex-1">
               <h3 className="text-white font-rocker text-2xl tracking-wide mb-2">{product.title}</h3>
-              <div className="text-accent font-bold text-xl mb-4">R$ {Number(product.price).toFixed(2)}</div>
+              <div className="text-accent font-bold text-3xl mb-4">R$ {Number(product.price).toFixed(2)}</div>
               
-              <div className="text-zinc-400 mb-6 flex-1 text-sm line-clamp-3">
+              <div className="text-zinc-400 mb-6 flex-1 text-xl line-clamp-3">
                 {product.description && <PortableText value={product.description} />}
               </div>
 
               <Link 
                 href={`/loja/${product.slug?.current}`}
-                className="mt-auto inline-flex items-center justify-center w-full px-6 py-3 bg-zinc-800 text-white font-bold tracking-widest uppercase hover:bg-accent hover:text-black transition-colors duration-300"
+                className="mt-auto inline-flex items-center justify-center w-full px-6 py-3 bg-zinc-800 text-white text-2xl font-bold tracking-widest uppercase hover:bg-accent hover:text-black transition-colors duration-300"
               >
                 Ver Detalhes
               </Link>

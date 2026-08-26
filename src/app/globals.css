@@ -19,8 +19,9 @@
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans);
+  font-family: var(--font-vt323);
   overflow-x: hidden;
+  font-size: 1.75rem; /* much larger since VT323 is a pixel font and usually reads smaller */
 }
 
 /* Custom Scrollbar */

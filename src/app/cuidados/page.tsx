@@ -20,18 +20,18 @@ const donts = [
 
 export default function Cuidados() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-start font-sans w-full relative overflow-hidden">
+    <div className="flex flex-col flex-1 items-center justify-start font-vt323 w-full relative overflow-hidden">
       
       {/* Animated Marquee Backgrounds */}
       <div className="fixed top-0 left-0 w-screen md:w-[45vw] h-screen overflow-hidden pointer-events-none z-0">
         <Marquee />
       </div>
       
-      <div className="fixed top-0 right-0 w-screen md:w-[45vw] h-screen overflow-hidden pointer-events-none z-0">
+      <div className="fixed top-0 right-0 hidden md:block w-screen md:w-[45vw] h-screen overflow-hidden pointer-events-none z-0">
         <Marquee reverse />
       </div>
 
-      <main className="flex flex-col flex-1 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 relative z-10">
+      <div className="flex flex-col flex-1 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 relative z-10">
       
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
@@ -41,7 +41,7 @@ export default function Cuidados() {
       >
         <h1 className="font-rocker text-5xl md:text-7xl uppercase tracking-wider mb-4 text-white">Manual de Sobrevivência</h1>
         <div className="w-24 h-1 bg-accent mx-auto mb-6"></div>
-        <p className="text-zinc-400 text-lg md:text-xl max-w-2xl mx-auto">
+        <p className="text-zinc-400 text-2xl md:text-3xl max-w-2xl mx-auto">
           A tatuagem é 50% meu trabalho, 50% o seu cuidado. 
           Siga estas regras ou estrague a arte.
         </p>
@@ -65,7 +65,7 @@ export default function Cuidados() {
             {dos.map((item, i) => (
               <li key={i} className="flex items-start gap-4">
                 <item.icon className="text-green-500 mt-1 shrink-0" size={24} />
-                <span className="text-zinc-300 text-lg">{item.text}</span>
+                <span className="text-zinc-300 text-2xl">{item.text}</span>
               </li>
             ))}
           </ul>
@@ -87,13 +87,13 @@ export default function Cuidados() {
             {donts.map((item, i) => (
               <li key={i} className="flex items-start gap-4">
                 <item.icon className="text-accent mt-1 shrink-0" size={24} />
-                <span className="text-zinc-300 text-lg">{item.text}</span>
+                <span className="text-zinc-300 text-2xl">{item.text}</span>
               </li>
             ))}
           </ul>
         </motion.div>
       </div>
-      </main>
+      </div>
     </div>
   );
 }

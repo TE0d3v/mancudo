@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
@@ -12,7 +11,7 @@ export default function Header() {
   return (
     <header className="flex flex-col md:flex-row w-full bg-black relative z-50">
       <div className="flex items-center justify-between w-full h-24 px-6 md:px-10">
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center flex-1">
           <Link href="/">
             <img
               className="h-20 md:h-24 w-auto invert"
@@ -30,7 +29,6 @@ export default function Header() {
           {isOpen ? <X size={32} /> : <Menu size={32} />}
         </button>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center justify-end gap-6 text-white font-rocker font-bold text-lg tracking-wide">
           <Link href="/" className="px-4 py-2 hover:bg-accent hover:text-black transition-colors duration-200">
             INÍCIO
@@ -62,9 +60,6 @@ export default function Header() {
               </Link>
               <Link href="/cuidados" onClick={() => setIsOpen(false)} className="hover:text-accent transition-colors">
                 Cuidados
-              </Link>
-              <Link href="/catalogo" onClick={() => setIsOpen(false)} className="hover:text-accent transition-colors">
-                Catálogo
               </Link>
               <Link href="/sobre" onClick={() => setIsOpen(false)} className="hover:text-accent transition-colors">
                 Sobre Mim
