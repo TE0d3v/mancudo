@@ -39,7 +39,7 @@ export default function Cuidados() {
         transition={{ duration: 0.6 }}
         className="mb-16 text-center"
       >
-        <h1 className="font-rocker text-5xl md:text-7xl uppercase tracking-wider mb-4 text-white">Manual de Sobrevivência</h1>
+        <h1 className="font-rocker text-4xl sm:text-5xl md:text-7xl uppercase tracking-wider mb-4 text-white">Manual de Sobrevivência</h1>
         <div className="w-24 h-1 bg-accent mx-auto mb-6"></div>
         <p className="text-zinc-400 text-2xl md:text-3xl max-w-2xl mx-auto">
           A tatuagem é 50% meu trabalho, 50% o seu cuidado. 

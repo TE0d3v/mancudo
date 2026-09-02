@@ -99,3 +99,18 @@ body {
   animation: glitch-anim-2 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
   mix-blend-mode: overlay;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-marquee, .animate-marquee-vertical {
+    animation: none !important;
+  }
+  .glitch-layer-1, .glitch-layer-2 {
+    animation: none !important;
+  }
+}

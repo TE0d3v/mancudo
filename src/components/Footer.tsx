@@ -42,7 +42,7 @@ export default function Footer() {
                   <Mail className="w-5 h-5 text-white" />
                 </div>
                 <div className="flex flex-col justify-center">
-                  <Link href="mailto:negrudomancudo@gmail.com" className="text-zinc-300 font-bold uppercase tracking-wider hover:text-accent transition-colors text-sm">negrudomancudo@gmail.com</Link>
+                  <Link href="mailto:negrudomancudo@gmail.com" className="text-zinc-300 font-bold uppercase tracking-wider hover:text-accent focus-visible:outline-none focus-visible:text-accent transition-colors text-sm">negrudomancudo@gmail.com</Link>
                   <span className="text-zinc-500 uppercase tracking-wider text-xs mt-1">Orçamentos e Dúvidas</span>
                 </div>
               </div>
@@ -58,25 +58,25 @@ export default function Footer() {
               <Link
                 href="https://www.instagram.com/negrudoo/"
                 target="_blank"
-                className="group flex items-center justify-between p-3 bg-zinc-900/50 border-2 border-zinc-800 hover:border-accent hover:bg-accent/10 transition-all duration-300 flex-1"
+                className="group flex items-center justify-between p-3 bg-zinc-900/50 border-2 border-zinc-800 hover:border-accent hover:bg-accent/10 focus-visible:outline-none focus-visible:border-accent focus-visible:bg-accent/10 transition-all duration-300 flex-1"
               >
                 <div className="flex items-center gap-3">
-                  <InstagramIcon className="w-5 h-5 text-zinc-400 group-hover:text-accent transition-colors" />
+                  <InstagramIcon className="w-5 h-5 text-zinc-400 group-hover:text-accent group-focus-visible:text-accent transition-colors" />
                   <span className="text-white font-bold tracking-widest uppercase text-sm">Instagram</span>
                 </div>
-                <ArrowUpRight className="w-4 h-4 text-zinc-600 group-hover:text-accent group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
+                <ArrowUpRight className="w-4 h-4 text-zinc-600 group-hover:text-accent group-focus-visible:text-accent group-hover:translate-x-1 group-hover:-translate-y-1 group-focus-visible:translate-x-1 group-focus-visible:-translate-y-1 transition-all" />
               </Link>
 
               <Link
                 href="https://wa.me/5585996087336?text=Olá gostaria de fazer um orçamento mancudo!"
                 target="_blank"
-                className="group flex items-center justify-between p-3 bg-zinc-900/50 border-2 border-zinc-800 hover:border-accent hover:bg-accent/10 transition-all duration-300 flex-1"
+                className="group flex items-center justify-between p-3 bg-zinc-900/50 border-2 border-zinc-800 hover:border-accent hover:bg-accent/10 focus-visible:outline-none focus-visible:border-accent focus-visible:bg-accent/10 transition-all duration-300 flex-1"
               >
                 <div className="flex items-center gap-3">
-                  <Phone className="w-5 h-5 text-zinc-400 group-hover:text-accent transition-colors" />
+                  <Phone className="w-5 h-5 text-zinc-400 group-hover:text-accent group-focus-visible:text-accent transition-colors" />
                   <span className="text-white font-bold tracking-widest uppercase text-sm">WhatsApp</span>
                 </div>
-                <ArrowUpRight className="w-4 h-4 text-zinc-600 group-hover:text-accent group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
+                <ArrowUpRight className="w-4 h-4 text-zinc-600 group-hover:text-accent group-focus-visible:text-accent group-hover:translate-x-1 group-hover:-translate-y-1 group-focus-visible:translate-x-1 group-focus-visible:-translate-y-1 transition-all" />
               </Link>
             </div>
           </div>
@@ -92,7 +92,7 @@ export default function Footer() {
 
           <button
             onClick={scrollToTop}
-            className="flex items-center gap-2 text-zinc-500 font-bold uppercase tracking-widest hover:text-accent transition-colors text-xs"
+            className="flex items-center gap-2 text-zinc-500 font-bold uppercase tracking-widest hover:text-accent focus-visible:outline-none focus-visible:text-accent transition-colors text-xs"
           >
             VOLTAR AO TOPO
             <ArrowUpRight className="w-4 h-4" />

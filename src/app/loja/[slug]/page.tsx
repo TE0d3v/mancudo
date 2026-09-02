@@ -28,7 +28,7 @@ export default async function ProductPage({
 
   return (
     <div className="flex flex-col flex-1 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
-      <Link href="/loja" className="inline-flex items-center text-zinc-400 hover:text-accent mb-12 transition-colors">
+      <Link href="/loja" className="inline-flex items-center text-zinc-400 hover:text-accent focus-visible:outline-none focus-visible:text-accent mb-12 transition-colors">
         <ArrowLeft className="w-4 h-4 mr-2" />
         Voltar para a loja
       </Link>
@@ -44,7 +44,7 @@ export default async function ProductPage({
         <Link 
           href={whatsappUrl}
           target="_blank"
-          className="flex md:inline-flex justify-center items-center w-full md:w-auto px-12 py-5 bg-accent text-black text-2xl font-bold tracking-widest uppercase hover:bg-white transition-colors duration-300"
+          className="flex md:inline-flex justify-center items-center w-full md:w-auto px-12 py-5 bg-accent text-black text-2xl font-bold tracking-widest uppercase hover:bg-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900 transition-colors duration-300"
         >
           Comprar Agora
         </Link>

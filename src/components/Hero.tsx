@@ -16,7 +16,7 @@ export function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.8 }}
-        className="font-rocker text-6xl md:text-8xl lg:text-[10rem] mb-6 tracking-wide text-white uppercase drop-shadow-[0_0_15px_rgba(220,38,38,0.3)] leading-none"
+        className="font-rocker text-5xl sm:text-6xl md:text-8xl lg:text-[10rem] mb-6 tracking-wide text-white uppercase drop-shadow-[0_0_15px_rgba(220,38,38,0.3)] leading-none"
       >
         Tattoo <span className="text-accent">Mancuda</span>
       </motion.h2>
@@ -38,16 +38,16 @@ export function Hero() {
       >
         <Link 
           href="/loja"
-          className="group relative inline-flex items-center justify-center px-10 py-5 bg-accent text-white font-bold tracking-widest uppercase border-4 border-accent hover:bg-black transition-colors duration-300"
+          className="group relative inline-flex items-center justify-center px-10 py-5 bg-accent text-white font-bold tracking-widest uppercase border-4 border-accent hover:bg-black focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-black transition-colors duration-300"
         >
-          <span className="relative z-10 flex items-center gap-2 transition-colors duration-300 group-hover:text-accent">
-            Ver Disponíveis <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          <span className="relative z-10 flex items-center gap-2 transition-colors duration-300 group-hover:text-accent group-focus-visible:text-accent">
+            Ver Disponíveis <ArrowRight className="w-5 h-5 group-hover:translate-x-1 group-focus-visible:translate-x-1 transition-transform" />
           </span>
         </Link>
         
         <Link 
           href="/cuidados"
-          className="group relative inline-flex items-center justify-center px-10 py-5 border-4 border-zinc-800 text-zinc-300 font-bold tracking-widest uppercase hover:border-accent hover:text-white transition-colors duration-300"
+          className="group relative inline-flex items-center justify-center px-10 py-5 border-4 border-zinc-800 text-zinc-300 font-bold tracking-widest uppercase hover:border-accent hover:text-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-zinc-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black transition-colors duration-300"
         >
           Guia de Cicatrização
         </Link>

@@ -48,7 +48,7 @@ export default async function LojaPage() {
 
               <Link 
                 href={`/loja/${product.slug?.current}`}
-                className="mt-auto inline-flex items-center justify-center w-full px-6 py-3 bg-zinc-800 text-white text-2xl font-bold tracking-widest uppercase hover:bg-accent hover:text-black transition-colors duration-300"
+                className="mt-auto inline-flex items-center justify-center w-full px-6 py-3 bg-zinc-800 text-white text-2xl font-bold tracking-widest uppercase hover:bg-accent hover:text-black focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900 transition-colors duration-300"
               >
                 Ver Detalhes
               </Link>

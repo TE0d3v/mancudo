@@ -38,9 +38,9 @@ export default async function Home() {
 
         {/* Featured Work Grid */}
         <div className="z-10 w-full max-w-7xl mx-auto px-6 mt-32 mb-20">
-          <div className="flex items-center justify-between mb-10 border-b-4 border-zinc-900 pb-4">
-            <h3 className="font-rocker text-4xl md:text-5xl uppercase tracking-wide">Trabalhos Disponiveis</h3>
-            <Link href="/loja" className="text-accent font-bold uppercase tracking-wider hover:text-white transition-colors">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-10 border-b-4 border-zinc-900 pb-4">
+            <h3 className="font-rocker text-3xl sm:text-4xl md:text-5xl uppercase tracking-wide">Trabalhos Disponiveis</h3>
+            <Link href="/loja" className="text-accent font-bold uppercase tracking-wider hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors">
               Ver Todos +
             </Link>
           </div>

@@ -194,7 +194,7 @@ export type AllSanitySchemaTypes =
 
 // Source: ../mancudo/src/app/loja/[slug]/page.tsx
 // Variable: PRODUCT_QUERY
-// Query: *[_type == "product" && slug.current == $slug][0]{ _id, title, price, description }
+// Query: *[_type == "product" && slug.current == $slug][0]{ _id, title, price, description, "imageUrl": image.asset->url }
 export type PRODUCT_QUERY_RESULT = {
   _id: string;
   title: string | null;
@@ -217,6 +217,7 @@ export type PRODUCT_QUERY_RESULT = {
     _type: "block";
     _key: string;
   }> | null;
+  imageUrl: string | null;
 } | null;
 
 // Source: ../mancudo/src/app/loja/page.tsx
@@ -252,7 +253,7 @@ export type PRODUCTS_QUERY_RESULT = Array<{
 import "@sanity/client";
 declare module "@sanity/client" {
   interface SanityQueries {
-    '*[_type == "product" && slug.current == $slug][0]{ _id, title, price, description }': PRODUCT_QUERY_RESULT;
+    '*[_type == "product" && slug.current == $slug][0]{ _id, title, price, description, "imageUrl": image.asset->url }': PRODUCT_QUERY_RESULT;
     '*[_type == "product" && defined(slug.current)] | order(_createdAt desc){ _id, title, slug, price, description, "imageUrl": image.asset->url }': PRODUCTS_QUERY_RESULT;
   }
 }

@@ -60,7 +60,7 @@ export default function Sobre() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="flex flex-col justify-center"
         >
-          <h1 className="font-rocker text-6xl md:text-8xl mb-2 tracking-wide uppercase text-white drop-shadow-md">
+          <h1 className="font-rocker text-5xl sm:text-6xl md:text-8xl mb-2 tracking-wide uppercase text-white drop-shadow-md">
             Mancudo
           </h1>
           <h2 className="text-accent text-3xl font-bold tracking-[0.2em] uppercase mb-8">
@@ -95,7 +95,7 @@ export default function Sobre() {
           transition={{ duration: 0.8 }}
           className="flex flex-col justify-center order-2 lg:order-1"
         >
-          <h2 className="font-rocker text-5xl md:text-7xl mb-8 tracking-wide uppercase text-white drop-shadow-md">
+          <h2 className="font-rocker text-4xl sm:text-5xl md:text-7xl mb-8 tracking-wide uppercase text-white drop-shadow-md">
             QUEM TÁ RISCANDO?
           </h2>
 
@@ -169,7 +169,7 @@ export default function Sobre() {
             {/* Mensagem discreta no topo */}
             <div className="absolute top-4 right-4 z-20">
               <button 
-                className="text-white font-vt323 text-xl hover:text-accent bg-black/50 px-3 py-1 border border-zinc-800 backdrop-blur-md transition-colors uppercase tracking-widest"
+                className="text-white font-vt323 text-xl hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent bg-black/50 px-3 py-1 border border-zinc-800 backdrop-blur-md transition-colors uppercase tracking-widest"
               >
                 [ FECHAR ]
               </button>

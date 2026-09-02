@@ -48,16 +48,16 @@ export default function Header() {
         </button>
 
         <nav className="hidden md:flex items-center justify-end gap-6 text-white font-rocker font-bold text-lg tracking-wide">
-          <Link href="/" className="px-4 py-2 hover:bg-accent hover:text-black transition-colors duration-200">
+          <Link href="/" className="px-4 py-2 hover:bg-accent hover:text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300">
             INÍCIO
           </Link>
-          <Link href="/cuidados" className="px-4 py-2 hover:bg-accent hover:text-black transition-colors duration-200">
+          <Link href="/cuidados" className="px-4 py-2 hover:bg-accent hover:text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300">
             CUIDADOS
           </Link>
-          <Link href="/sobre" className="px-4 py-2 hover:bg-accent hover:text-black transition-colors duration-200">
+          <Link href="/sobre" className="px-4 py-2 hover:bg-accent hover:text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300">
             SOBRE MIM
           </Link>
-          <Link href="/loja" className="px-4 py-2 hover:bg-accent hover:text-black transition-colors duration-200">
+          <Link href="/loja" className="px-4 py-2 hover:bg-accent hover:text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300">
             LOJA
           </Link>
         </nav>
@@ -73,16 +73,16 @@ export default function Header() {
             className="md:hidden flex flex-col bg-zinc-950 border-b border-zinc-900 overflow-hidden"
           >
             <div className="flex flex-col items-center justify-center py-6 gap-6 text-white font-rocker text-xl tracking-wide">
-              <Link href="/" onClick={() => setIsOpen(false)} className="hover:text-accent transition-colors">
+              <Link href="/" onClick={() => setIsOpen(false)} className="hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300">
                 Início
               </Link>
-              <Link href="/cuidados" onClick={() => setIsOpen(false)} className="hover:text-accent transition-colors">
+              <Link href="/cuidados" onClick={() => setIsOpen(false)} className="hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300">
                 Cuidados
               </Link>
-              <Link href="/sobre" onClick={() => setIsOpen(false)} className="hover:text-accent transition-colors">
+              <Link href="/sobre" onClick={() => setIsOpen(false)} className="hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300">
                 Sobre Mim
               </Link>
-              <Link href="/loja" onClick={() => setIsOpen(false)} className="hover:text-accent transition-colors">
+              <Link href="/loja" onClick={() => setIsOpen(false)} className="hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300">
                 Loja
               </Link>
             </div>
