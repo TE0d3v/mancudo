@@ -36,7 +36,7 @@ export default async function ProductPage({
 
       <article className="bg-zinc-900 border border-zinc-800 p-6 md:p-10 flex flex-col md:flex-row gap-8 md:gap-12 md:items-center shadow-xl">
         {product.imageUrl && (
-          <div className="w-full md:w-1/2 flex-shrink-0 flex justify-center">
+          <div className="w-full md:w-1/2 shrink-0 flex justify-center">
             <div className="border-4 border-zinc-800 bg-zinc-950 flex items-center justify-center overflow-hidden w-full max-w-md md:max-w-none">
               <Image 
                 src={product.imageUrl} 
