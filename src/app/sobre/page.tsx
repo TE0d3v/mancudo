@@ -48,6 +48,8 @@ export default function Sobre() {
             src="/about.png"
             alt="Mancudo"
             fill
+            priority
+            sizes="(max-width: 1024px) 100vw, 50vw"
             className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 scale-105 hover:scale-100"
           />
           <div className="absolute inset-0 border-10 border-black/50 pointer-events-none"></div>
@@ -60,7 +62,7 @@ export default function Sobre() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="flex flex-col justify-center"
         >
-          <h1 className="font-rocker text-6xl md:text-8xl mb-2 tracking-wide uppercase text-white drop-shadow-md">
+          <h1 className="font-rocker text-5xl sm:text-6xl md:text-8xl mb-2 tracking-wide uppercase text-white drop-shadow-md">
             Mancudo
           </h1>
           <h2 className="text-accent text-3xl font-bold tracking-[0.2em] uppercase mb-8">
@@ -95,7 +97,7 @@ export default function Sobre() {
           transition={{ duration: 0.8 }}
           className="flex flex-col justify-center order-2 lg:order-1"
         >
-          <h2 className="font-rocker text-5xl md:text-7xl mb-8 tracking-wide uppercase text-white drop-shadow-md">
+          <h2 className="font-rocker text-4xl sm:text-5xl md:text-7xl mb-8 tracking-wide uppercase text-white drop-shadow-md">
             QUEM TÁ RISCANDO?
           </h2>
 
@@ -129,12 +131,14 @@ export default function Sobre() {
                 src="/foto-crianca.png"
                 alt="Glitch 1"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover glitch-layer-1 z-10 scale-105"
               />
               <Image 
                 src="/foto-crianca.png"
                 alt="Glitch 2"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover glitch-layer-2 z-10 scale-105"
               />
             </>
@@ -144,6 +148,7 @@ export default function Sobre() {
             src={isGlitched ? "/foto-crianca.png" : "/about2.png"}
             alt="Felipe"
             fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
             className={`object-cover transition-all duration-300 scale-105 hover:scale-100 ${
               isGlitched ? "grayscale-0 scale-100 opacity-90" : "grayscale hover:grayscale-0"
             }`}
@@ -169,7 +174,7 @@ export default function Sobre() {
             {/* Mensagem discreta no topo */}
             <div className="absolute top-4 right-4 z-20">
               <button 
-                className="text-white font-vt323 text-xl hover:text-accent bg-black/50 px-3 py-1 border border-zinc-800 backdrop-blur-md transition-colors uppercase tracking-widest"
+                className="text-white font-vt323 text-xl hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent bg-black/50 px-3 py-1 border border-zinc-800 backdrop-blur-md transition-colors uppercase tracking-widest"
               >
                 [ FECHAR ]
               </button>

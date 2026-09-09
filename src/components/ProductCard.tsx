@@ -15,7 +15,7 @@ interface ProductCardProps {
 
 export function ProductCard({ product }: ProductCardProps) {
   return (
-    <Link href={`/loja/${product.slug}`} className="block">
+    <Link href={`/loja/${product.slug}`} className="block focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-black">
       <div className="relative aspect-3/4 border-4 border-zinc-800 hover:border-accent transition-colors duration-300 group overflow-hidden">
         {product.image ? (
           <Image 

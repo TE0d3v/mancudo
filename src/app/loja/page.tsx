@@ -5,13 +5,23 @@ import Image from "next/image";
 import { PortableText } from "next-sanity";
 
 const PRODUCTS_QUERY = defineQuery(
-  `*[_type == "product" && defined(slug.current)] | order(_createdAt desc){ _id, title, slug, price, description, "imageUrl": image.asset->url }`
+  `*[_type == "product" && defined(slug.current) && slug.current != "rengav"] | order(_createdAt desc){ _id, title, slug, price, description, "imageUrl": image.asset->url }`
 );
 
-export const dynamic = 'force-dynamic';
+export const revalidate = 60;
+
+type ShopProduct = {
+  _id: string;
+  title: string;
+  slug: any;
+  price: number;
+  description: any;
+  imageUrl: string;
+};
 
 export default async function LojaPage() {
-  const { data: products } = await sanityFetch({ query: PRODUCTS_QUERY });
+  const { data } = await sanityFetch({ query: PRODUCTS_QUERY });
+  const products = (data as ShopProduct[]) || [];
 
   return (
     <div className="flex flex-col flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
@@ -21,8 +31,8 @@ export default async function LojaPage() {
         <p className="text-zinc-400 max-w-2xl text-2xl">Artes exclusivas pra quem quer ter um visual mancudo.</p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {products.map((product) => (
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
+        {products.map((product: ShopProduct, index: number) => (
           <div
             key={product._id}
             className="group relative overflow-hidden bg-zinc-900 border-4 border-zinc-800 flex flex-col hover:border-accent transition-colors duration-300"
@@ -33,6 +43,8 @@ export default async function LojaPage() {
                   src={product.imageUrl} 
                   alt={product.title || "Produto"} 
                   fill
+                  priority={index < 4}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
                 />
               </div>
@@ -48,7 +60,7 @@ export default async function LojaPage() {
 
               <Link 
                 href={`/loja/${product.slug?.current}`}
-                className="mt-auto inline-flex items-center justify-center w-full px-6 py-3 bg-zinc-800 text-white text-2xl font-bold tracking-widest uppercase hover:bg-accent hover:text-black transition-colors duration-300"
+                className="mt-auto inline-flex items-center justify-center w-full px-6 py-3 bg-zinc-800 text-white text-2xl font-bold tracking-widest uppercase hover:bg-accent hover:text-black focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900 transition-colors duration-300"
               >
                 Ver Detalhes
               </Link>
