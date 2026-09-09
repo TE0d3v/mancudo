@@ -11,6 +11,11 @@ const PRODUCT_QUERY = defineQuery(
 
 const options = { next: { revalidate: 30 } };
 
+export async function generateStaticParams() {
+  const slugs = await client.fetch(`*[_type == "product" && defined(slug.current) && slug.current != "rengav"][].slug.current`);
+  return slugs.map((slug: string) => ({ slug }));
+}
+
 export default async function ProductPage({
   params,
 }: {
@@ -43,6 +48,7 @@ export default async function ProductPage({
                 alt={product.title || "Produto"} 
                 width={0}
                 height={0}
+                priority
                 sizes="(max-width: 768px) 100vw, 50vw"
                 style={{ width: '100%', height: 'auto', maxHeight: '70vh' }}
                 className="object-contain"

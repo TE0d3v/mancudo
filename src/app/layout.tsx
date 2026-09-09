@@ -1,19 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, New_Rocker, VT323} from "next/font/google";
+import { New_Rocker, VT323} from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { SanityLive } from "@/sanity/live";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const newRocker = New_Rocker({
   variable: "--font-new-rocker",
@@ -26,8 +16,6 @@ const Vt323 = VT323({
   subsets: ["latin"],
   weight: "400"
 });
-
-
 
 export const metadata: Metadata = {
   title: "Mancudo | Tatuador",
@@ -42,7 +30,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${geistSans.variable} ${geistMono.variable} ${newRocker.variable} ${Vt323.variable} flex flex-col h-full antialiased dark`}
+      className={`${newRocker.variable} ${Vt323.variable} flex flex-col h-full antialiased dark`}
     >
       <body suppressHydrationWarning className="bg-black text-white min-h-full flex flex-col bg-noise selection:bg-accent selection:text-white">
         <Header />

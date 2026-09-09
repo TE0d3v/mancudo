@@ -48,6 +48,7 @@ export default function Sobre() {
             src="/about.png"
             alt="Mancudo"
             fill
+            priority
             sizes="(max-width: 1024px) 100vw, 50vw"
             className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 scale-105 hover:scale-100"
           />

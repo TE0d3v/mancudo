@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -18,11 +19,13 @@ export default function Header() {
               
               {
                 node: (
-                  <Link href="/" className="flex items-center h-16 group hover:opacity-80 transition-opacity">
-                    <img
+                  <Link href="/" className="flex items-center h-16 group hover:opacity-80 transition-opacity relative aspect-[3/1]">
+                    <Image
                       src="/logomancuda.svg"
                       alt="Mancudo logo"
-                      className="h-full w-auto object-contain invert"
+                      fill
+                      priority
+                      className="object-contain invert"
                     />
                   </Link>
                 )

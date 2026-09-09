@@ -5,26 +5,25 @@ interface MarqueeProps {
   reverse?: boolean;
 }
 
+const items = Array.from({ length: 8 });
+
+const ImageSet = () => (
+  <div className="flex flex-col gap-2 py-5">
+    {items.map((_, i) => (
+      <div key={i} className="relative w-full h-[80vh] opacity-30 grayscale mix-blend-screen">
+        <Image 
+          src="/marquee-image.svg" 
+          alt="Mancudo Art" 
+          fill
+          priority
+          className="object-contain"
+        />
+      </div>
+    ))}
+  </div>
+);
+
 export function Marquee({ reverse = false }: MarqueeProps) {
-  // Create an array of items to repeat the image
-  const items = Array.from({ length: 8 });
-
-  const ImageSet = () => (
-    <div className="flex flex-col gap-2 py-5">
-      {items.map((_, i) => (
-        <div key={i} className="relative w-full h-[80vh] opacity-30 grayscale mix-blend-screen">
-          <Image 
-            src="/marquee-image.svg" 
-            alt="Mancudo Art" 
-            fill
-            priority
-            className="object-contain"
-          />
-        </div>
-      ))}
-    </div>
-  );
-
   return (
     <div className="absolute top-0 w-full h-[200vh] pointer-events-none flex flex-col z-0 overflow-hidden">
       <div 
