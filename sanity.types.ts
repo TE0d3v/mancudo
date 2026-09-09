@@ -250,10 +250,13 @@ export type PRODUCTS_QUERY_RESULT = Array<{
 }>;
 
 // Query TypeMap
-import "@sanity/client";
-declare module "@sanity/client" {
+declare global {
   interface SanityQueries {
     '*[_type == "product" && slug.current == $slug][0]{ _id, title, price, description, "imageUrl": image.asset->url }': PRODUCT_QUERY_RESULT;
     '*[_type == "product" && defined(slug.current)] | order(_createdAt desc){ _id, title, slug, price, description, "imageUrl": image.asset->url }': PRODUCTS_QUERY_RESULT;
   }
+}
+// Lets @sanity/client releases that predate the global registry read it too
+declare module "@sanity/client" {
+  interface SanityQueries extends globalThis.SanityQueries {}
 }

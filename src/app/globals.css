@@ -41,12 +41,12 @@ body {
 
 /* Noise overlay */
 .bg-noise {
-  position: relative;
+  /* relative not strictly needed for fixed child, but keeping it is fine, actually let's remove it if we want, or keep it */
 }
 .bg-noise::before {
   content: "";
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
   pointer-events: none;
   z-index: 50;
   opacity: 0.06;

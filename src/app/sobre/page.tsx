@@ -48,6 +48,7 @@ export default function Sobre() {
             src="/about.png"
             alt="Mancudo"
             fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
             className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 scale-105 hover:scale-100"
           />
           <div className="absolute inset-0 border-10 border-black/50 pointer-events-none"></div>
@@ -129,12 +130,14 @@ export default function Sobre() {
                 src="/foto-crianca.png"
                 alt="Glitch 1"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover glitch-layer-1 z-10 scale-105"
               />
               <Image 
                 src="/foto-crianca.png"
                 alt="Glitch 2"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover glitch-layer-2 z-10 scale-105"
               />
             </>
@@ -144,6 +147,7 @@ export default function Sobre() {
             src={isGlitched ? "/foto-crianca.png" : "/about2.png"}
             alt="Felipe"
             fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
             className={`object-cover transition-all duration-300 scale-105 hover:scale-100 ${
               isGlitched ? "grayscale-0 scale-100 opacity-90" : "grayscale hover:grayscale-0"
             }`}
