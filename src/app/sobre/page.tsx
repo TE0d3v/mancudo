@@ -100,7 +100,7 @@ export default function Sobre() {
 
           <div className="space-y-6 text-zinc-400 text-4xl leading-relaxed mb-10 border-l-2 border-accent pl-6 font-vt323">
             <p>
-              3 anos de corre e nenhuma vontade de fazer o que todo mundo faz , aqui eu t deixo diferente dos normais.
+              3 anos de corre e nenhuma vontade de fazer o que todo mundo faz, aqui eu te deixo diferente dos normais.
             </p>
           </div>
         </motion.div>
