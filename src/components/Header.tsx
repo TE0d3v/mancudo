@@ -19,7 +19,7 @@ export default function Header() {
               
               {
                 node: (
-                  <Link href="/" className="flex items-center h-16 group hover:opacity-80 transition-opacity relative aspect-[3/1]">
+                  <Link href="/" className="flex items-center h-16 group hover:opacity-80 transition-opacity relative aspect-3/1">
                     <Image
                       src="/logomancuda.svg"
                       alt="Mancudo logo"
@@ -31,7 +31,7 @@ export default function Header() {
                 )
               }
             ]}
-            speed={40}
+            speed={0}
             direction="right"
             logoHeight={64}
             gap={1400}
