@@ -68,7 +68,7 @@ export default function Footer() {
               </Link>
 
               <Link
-                href="https://wa.me/5585996087336?text=Olá gostaria de fazer um orçamento mancudo!"
+                href="https://wa.me/5585996087336?text=Olá, gostaria de fazer um orçamento, Mancudo!"
                 target="_blank"
                 className="group flex items-center justify-between p-3 bg-zinc-900/50 border-2 border-zinc-800 hover:border-accent hover:bg-accent/10 focus-visible:outline-none focus-visible:border-accent focus-visible:bg-accent/10 transition-all duration-300 flex-1"
               >

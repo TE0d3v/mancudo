@@ -68,8 +68,8 @@ export default function Sobre() {
 
           <div className="space-y-6 text-zinc-400 text-4xl leading-relaxed mb-10 border-l-2 border-accent pl-6 font-vt323">
             <p>
-              Sou o FELIPE , o ADM por trás da tatu mancuda.
-              Sou cria do famoso 085 ( FORTAL) . Nunca pisei em faculdade de artes e nunca fiz curso pra aprender a desenhar. Meu estilo nasceu das minhas vivências, frustrações e etc .
+              Sou o FELIPE, o ADM por trás da tatu mancuda.
+              Sou cria do famoso 085 (FORTAL). Nunca pisei em faculdade de artes e nunca fiz curso pra aprender a desenhar. Meu estilo nasceu das minhas vivências, frustrações e etc.
             </p>
             <p>
               Foi na rua daqui que peguei a referência do que faço hoje: picho no muro, gibi, adesivo colado em poste e danças urbanas.

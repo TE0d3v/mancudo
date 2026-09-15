@@ -27,7 +27,7 @@ export function Hero() {
         transition={{ delay: 0.4, duration: 0.8 }}
         className="max-w-2xl text-zinc-400 text-3xl md:text-4xl mb-12 font-bold tracking-tight font-vt323"
       >
-        Tatuagem não é adorno, é cicatriz intencional. O mais Mancudo de fotal city.
+        Tatuagem não é adorno, é cicatriz intencional. O mais Mancudo de Fortal City.
       </motion.p>
 
       <motion.div
